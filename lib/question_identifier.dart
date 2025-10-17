@@ -15,15 +15,15 @@ class QuestionIdentifier extends StatelessWidget{
     final questionNumber = questionIndex + 1;
 
     final backgroundColor = isCorrect
-      ? const Color.fromARGB(255, 36, 154, 136)
-        : const Color.fromARGB(255, 151, 15, 128);
+      ? const Color.fromARGB(255, 124, 189, 247)
+        : const Color.fromARGB(251, 251, 105, 245);
     return Container(
-      width: 30,
-      height: 30,
+      width: 40,
+      height: 40,
       alignment: Alignment.center,
       decoration: BoxDecoration(
         color: backgroundColor,
-        borderRadius: BorderRadius.circular(100),
+        borderRadius: BorderRadius.circular(150),
       ),
       child: Text(
         questionNumber.toString(),

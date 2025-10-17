@@ -16,20 +16,25 @@ class QuestionSummary extends StatelessWidget {
             final bool isAnswerCorrect = data['user_answer'] == data['correct_answer'];
 
             return Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 QuestionIdentifier(
                   questionIndex: data['question_index'] as int,
                   isCorrect: isAnswerCorrect,
                 ),
-                SizedBox(width: 5,),
+                SizedBox(width: 15,),
                 Expanded(
                   child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text(data['question'] as String, style: TextStyle(color: Colors.white),),
-                      SizedBox(height: 5),
-                      Text(data['user_answer'] as String),
-                      Text(data['correct_answer'] as String),
-                    ],
+                      Text(data['question'] as String, style: TextStyle(color: Colors.white, fontSize: 16, fontWeight: FontWeight.bold),),
+                      Text(
+                        data['user_answer'] as String,
+                        style: TextStyle(color: const Color.fromARGB(251, 251, 105, 245)),),
+                      Text(
+                        data['correct_answer'] as String,
+                        style: TextStyle(color: const Color.fromARGB(255, 124, 189, 247)),
+                  )],
                   ),
                 ),
               ],
